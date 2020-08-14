@@ -1,6 +1,6 @@
 # monthyearpicker
 
-A set of lightweight month and year pickers for user with Bootstrap 4.
+A set of lightweight month and year pickers for use with Bootstrap 4.
 
 ## Getting started
 
