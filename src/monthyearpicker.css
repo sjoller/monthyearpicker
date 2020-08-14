@@ -1,0 +1,96 @@
+:root {
+    --myp-popup-background: #fff;
+    --myp-popup-border: rgb(206, 212, 218);
+}
+
+.myp-wrapper {
+    position: absolute;
+    border: 1px solid var(--myp-popup-border);
+    border-radius: 4px;
+    padding: 5px;
+    background-color: var(--myp-popup-background);
+    z-index: 2000;
+    width: 250px;
+}
+
+.myp-wrapper:focus {
+    outline: none;
+}
+
+/* Makes the top tip */
+.myp-wrapper::after, .myp-wrapper::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    position: absolute;
+    left: 10px;
+    bottom: 100%;
+    /*transform: translateX(-50%);*/
+}
+
+/* Tip filling */
+.myp-wrapper::after {
+    border-width: 10px;
+    margin-bottom: -1px;
+    border-color: transparent transparent var(--myp-popup-background) transparent;
+}
+
+/* tip outer border */
+.myp-wrapper::before {
+    border-color: transparent transparent var(--myp-popup-border) transparent;
+}
+
+.myp-header {
+    border-bottom: 1px solid var(--myp-popup-border);
+    padding-bottom: .25rem;
+}
+
+.myp-year-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myp-prev {
+
+}
+
+.myp-year-select {
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: .25rem;
+    border-radius: .25rem;
+    text-align-last: center;
+}
+
+.myp-next {
+
+}
+
+.myp-items-wrapper {
+
+}
+
+ul.myp-items {
+    text-align: center;
+    margin: .5rem 0 0 0;
+}
+
+ul.myp-items li {
+    display: inline;
+}
+
+.myp-month-btn {
+    white-space: nowrap;
+    width: 33%;
+    text-align: center;
+    margin-bottom: .25rem;
+}
+
+.myp-year-btn {
+    white-space: nowrap;
+    width: 25%;
+    text-align: center;
+    margin-bottom: .25rem;
+}
