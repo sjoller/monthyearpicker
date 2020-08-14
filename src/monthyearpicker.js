@@ -26,7 +26,7 @@
 (function($) {
     "use strict";
 
-    $.fn.monthYearPicker = function(options) {
+    $.fn.monthyearpicker = function(options) {
         let counter = 1;
 
         let settings = $.extend({
