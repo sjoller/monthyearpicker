@@ -29,8 +29,8 @@ The (month) picker supports moment locales, so to use it, make sure to include t
 And finally, include the plugin js and css:
 
 ```html
-<link href="/asset/monthyearpicker/dist/monthyearpicker.min.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="/asset/monthyearpicker/dist/monthyearpicker.min.js"></script>
+<link href="/asset/monthyearpicker/dist/css/monthyearpicker.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/asset/monthyearpicker/dist/js/monthyearpicker.min.js"></script>
 ```
 
 Attach it to an input element like so:
