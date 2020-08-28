@@ -49,21 +49,41 @@ $('#my-year-picker').monthyearpicker({
 });
 ```
 
+Currently the picker will always show below and left aligned with the target element. Likewise the picker box arrow always points up.
+
+The picker will reposition itself on screen resize. It should be usable on mobile devises, but limited testing has been done on this. It is not really "responsive" out of the box, in that it will not scale, based on screen size - width, set in CSS, will be used for all screen sizes, however with a width of 250 px, it will likely fit most devises.
+
+The CSS is based on Bootstrap 4, so most of it will use sizes adhearing to Bootstrap 4 sizing scheme. 
 
 ## Options
 
 | Option | Type | Default | Description |
 |:--- |:---:|:---:|:--- |
 | locale | string | 'en' | Moment locale to use |
-| startYear | string | current year - 20 years | Start year for the year drop down in the month picker |
-| endYear | string | current year + 20 years | End year for the year drop down in the month picker |
-| type | string | 'month' | Two options - 'month' or 'year' |
+| startYear | string or null | current year - 20 years | Start year for the year drop down in the month picker and the lower limit for navigation in the year picker. Set to null to disable the limit in both types of pickers |
+| endYear | number or null | current year + 20 years | End year for the year drop down in the month picker and the upper limit for navigation in the year picker. Set to null to disable the limit in both types of picker |
+| type | number | 'month' | Two options - 'month' or 'year' |
+| monthFormat | string | 'YYYY-MM' | Moment format string |
+| yearFormat | string | 'YYYY' | Moment format string |
+| yearPageLength | number | 20 | Number of year items shown in the year picker (and number of years to jump back or forwards, using the navigation buttons) |
+| yearSelectClass | string | 'form-control myp-year-select' | Class(es) added to year dropdown element |
+| itemType | string | '<li>' | Wrapper element for item buttons |
 | itemBtnClass | string | 'btn btn-light' | Classes added to item buttons in both types of pickers |
 | itemBtnActiveClass | string | 'btn btn-primary' | Classes added to current item button in both types of pickers |
 | navBtnClass | string | 'btn btn-light' | Classes added to the navigation buttons in the year picker |
-| template | string | See below | A html template |
+| template | string | [See below](#template) | A html template |
 
-### Template
+## Methods
+| Name | parameters | Description |
+|:--- |:---:|:--- |
+| onShow | this, picker, target | Called after picker is added and positioned | 
+| onMonthSelect | this, picker, target, selectedYear | Called after target is updated and the picker is removed |
+| onYearSelect | this, picker, target | Called after target is updated and the picker is removed |
+| onNavigateBack | this, picker, start | Called when the year pickers previous button is clicked, after the picker content is updated |
+| onNavigateForward | this, picker, start | Called when the year pickers next button is clicked, after the picker content is updated |
+| onHide | this, picker, target | Called before picker is removed | 
+
+### <a name="template"></a>Template
 
 The default template looks like this:
 
