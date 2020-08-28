@@ -76,12 +76,12 @@ The CSS is based on Bootstrap 4, so most of it will use sizes adhearing to Boots
 ## Methods
 | Name | parameters | Description |
 |:--- |:---:|:--- |
-| onShow | this, picker, target | Called after picker is added and positioned | 
-| onMonthSelect | this, picker, target, selectedYear | Called after target is updated and the picker is removed |
-| onYearSelect | this, picker, target | Called after target is updated and the picker is removed |
-| onNavigateBack | this, picker, start | Called when the year pickers previous button is clicked, after the picker content is updated |
-| onNavigateForward | this, picker, start | Called when the year pickers next button is clicked, after the picker content is updated |
-| onHide | this, picker, target | Called before picker is removed | 
+| onShow | picker, target | Called after picker is added and positioned | 
+| onMonthSelect | picker, target, selectedYear | Called after target is updated and the picker is removed |
+| onYearSelect | picker, target | Called after target is updated and the picker is removed |
+| onNavigateBack | picker, start | Called when the year pickers previous button is clicked, after the picker content is updated |
+| onNavigateForward | picker, start | Called when the year pickers next button is clicked, after the picker content is updated |
+| onHide | picker, target | Called before picker is removed | 
 
 ### <a name="template"></a>Template
 
