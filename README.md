@@ -67,7 +67,7 @@ The CSS is based on Bootstrap 4, so most of it will use sizes adhearing to Boots
 | yearFormat | string | 'YYYY' | Moment format string |
 | yearPageLength | number | 20 | Number of year items shown in the year picker (and number of years to jump back or forwards, using the navigation buttons) |
 | yearSelectClass | string | 'form-control myp-year-select' | Class(es) added to year dropdown element |
-| itemType | string | '<li>' | Wrapper element for item buttons |
+| itemType | string | '\<li\>' | Wrapper element for item buttons |
 | itemBtnClass | string | 'btn btn-light' | Classes added to item buttons in both types of pickers |
 | itemBtnActiveClass | string | 'btn btn-primary' | Classes added to current item button in both types of pickers |
 | navBtnClass | string | 'btn btn-light' | Classes added to the navigation buttons in the year picker |
